@@ -18,7 +18,7 @@ const Form = () => {
         errorMessage:
         "Имя пользователя должно содержать 3 символа",
         label: "Пользователь",
-        pattern: "^[A-Za-z0-9]{3}$",
+        pattern: "^[A-Za-z0-9]{3,}$",
         required: true,
     },
     {
@@ -38,7 +38,7 @@ const Form = () => {
         errorMessage:
         "Пароль должен быть 4 символа",
         label: "Ваш Пароль",
-        pattern: `^[A-Za-z0-9]{4}$`,
+        pattern: `^[A-Za-z0-9]{4,}$`,
         required: true,
     },
     {
