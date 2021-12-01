@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 const Input = (props) => {
   const [focused, setFocused] = useState(false);
@@ -7,16 +7,15 @@ const Input = (props) => {
   const handleFocus = (e) => {
     setFocused(true);
   };
-    console.log('inputProps here: ', {...inputProps});
+  console.log('inputProps here: ', {...inputProps});
   return (
-    <div className="formInput">
+    <div className="form-input">
       <label>{label}</label>
       <input
         {...inputProps}
         onChange={onChange}
         onBlur={handleFocus}
-        onFocus={() =>
-          inputProps.name === "confirmPassword" && setFocused(true)
+        onFocus={() => inputProps.name === "confirmPassword" && setFocused(true)
         }
         focused={focused.toString()}
       />

@@ -2,13 +2,14 @@ import React, {useState} from "react";
 import Input from "./Input";
 
 const Form = () => {
+    // all values, fields in the form
     const [values, setValues] = useState({
         username: "",
         email: "",
         password: "",
         confirmPassword: "",
     });
-
+    // inputs params
     const inputs = [
         {
         id: 1,
